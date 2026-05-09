@@ -1,0 +1,22 @@
+# hybrid-analytics-agent — Python 3.14
+# Pinned to lower bounds; let pip resolve compatible upper bounds.
+# If a wheel is missing for 3.14, surface the failure rather than downgrading silently.
+
+# --- LLM + embeddings ---
+openai>=1.55.0
+
+# --- Vector store ---
+# Note: chromadb pulls onnxruntime + hnswlib (native). These sometimes
+# lag new CPython releases. If install fails on 3.14, report before swapping.
+chromadb>=0.5.20
+
+# --- Data ---
+pandas>=2.2.3
+numpy>=2.1.0
+
+# --- UI + charts ---
+streamlit>=1.40.0
+plotly>=5.24.0
+
+# --- Config ---
+python-dotenv>=1.0.1

@@ -1,0 +1,304 @@
+[
+  {
+    "id": "sql-01",
+    "difficulty": "easy",
+    "question": "What is the total number of orders in the dataset?",
+    "expected_route": "sql",
+    "expected_sql_tables": ["orders"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["99,441", "99441"],
+    "expected_chart_type": "kpi"
+  },
+  {
+    "id": "sql-02",
+    "difficulty": "easy",
+    "question": "What was the total revenue across all orders placed in 2017?",
+    "expected_route": "sql",
+    "expected_sql_tables": ["orders", "order_items"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["7,142,672", "7142672", "7.14"],
+    "expected_chart_type": "kpi"
+  },
+  {
+    "id": "sql-03",
+    "difficulty": "easy",
+    "question": "List the top 5 customer states by number of orders.",
+    "expected_route": "sql",
+    "expected_sql_tables": ["orders", "customers"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["SP", "RJ", "MG"],
+    "expected_chart_type": "bar"
+  },
+  {
+    "id": "sql-04",
+    "difficulty": "easy",
+    "question": "What is the average review score across all reviews?",
+    "expected_route": "sql",
+    "expected_sql_tables": ["order_reviews"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["4.0", "4.1"],
+    "expected_chart_type": "kpi"
+  },
+  {
+    "id": "sql-05",
+    "difficulty": "medium",
+    "question": "What share of delivered orders arrive on or before the estimated delivery date?",
+    "expected_route": "sql",
+    "expected_sql_tables": ["orders"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["92", "93"],
+    "expected_chart_type": "kpi"
+  },
+  {
+    "id": "sql-06",
+    "difficulty": "medium",
+    "question": "Top 10 product categories by total revenue in 2018, in English category names.",
+    "expected_route": "sql",
+    "expected_sql_tables": ["orders", "order_items", "products", "product_category_translation"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["health_beauty", "watches_gifts", "bed_bath_table"],
+    "expected_chart_type": "bar"
+  },
+  {
+    "id": "sql-07",
+    "difficulty": "medium",
+    "question": "Average delivery time in days for delivered orders, by customer state.",
+    "expected_route": "sql",
+    "expected_sql_tables": ["orders", "customers"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["RR", "AP", "AM"],
+    "expected_chart_type": "table"
+  },
+  {
+    "id": "sql-08",
+    "difficulty": "easy",
+    "question": "How many distinct sellers appear in the dataset?",
+    "expected_route": "sql",
+    "expected_sql_tables": ["sellers"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["3,095", "3095"],
+    "expected_chart_type": "kpi"
+  },
+  {
+    "id": "sql-09",
+    "difficulty": "hard",
+    "question": "What is the median number of items per order? (SQLite has no MEDIAN.)",
+    "expected_route": "sql",
+    "expected_sql_tables": ["order_items"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["1"],
+    "expected_chart_type": "kpi"
+  },
+  {
+    "id": "sql-10",
+    "difficulty": "medium",
+    "question": "Show monthly revenue across all of 2017.",
+    "expected_route": "sql",
+    "expected_sql_tables": ["orders", "order_items"],
+    "expected_doc_titles": null,
+    "expected_answer_contains": ["2017"],
+    "expected_chart_type": "line"
+  },
+
+  {
+    "id": "docs-01",
+    "difficulty": "easy",
+    "question": "How do we calculate Customer Lifetime Value?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["kpi_definitions.md"],
+    "expected_answer_contains": ["customer_unique_id", "price"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-02",
+    "difficulty": "medium",
+    "question": "How is the seller performance score calculated?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["kpi_definitions.md"],
+    "expected_answer_contains": ["review", "delivery", "cancellation"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-03",
+    "difficulty": "medium",
+    "question": "How is RFM scoring computed for the Olist dataset?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["rfm_methodology.md"],
+    "expected_answer_contains": ["recency", "frequency", "monetary"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-04",
+    "difficulty": "easy",
+    "question": "What is the difference between a Champion and a Loyal customer in our segmentation?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["segment_definitions.md"],
+    "expected_answer_contains": ["Champions", "Loyal", "recency"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-05",
+    "difficulty": "easy",
+    "question": "What is the on-time delivery SLA?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["delivery_performance.md", "kpi_definitions.md"],
+    "expected_answer_contains": ["estimated", "delivered"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-06",
+    "difficulty": "easy",
+    "question": "What columns are available in the orders table and what do they mean?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["data_dictionary.md"],
+    "expected_answer_contains": ["order_status", "order_purchase_timestamp"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-07",
+    "difficulty": "medium",
+    "question": "What does it mean if a category has an average review score below 4.0?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["review_analysis_guide.md"],
+    "expected_answer_contains": ["below", "4.0", "negative"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-08",
+    "difficulty": "medium",
+    "question": "How is the repeat purchase rate defined in our metrics?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["kpi_definitions.md"],
+    "expected_answer_contains": ["customer_unique_id", "share"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-09",
+    "difficulty": "hard",
+    "question": "Why don't we use the standard 11-segment RFM grid for Olist customers?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["segment_definitions.md"],
+    "expected_answer_contains": ["frequency", "repeat"],
+    "expected_chart_type": "none"
+  },
+  {
+    "id": "docs-10",
+    "difficulty": "medium",
+    "question": "How should I interpret the review score distribution?",
+    "expected_route": "docs",
+    "expected_sql_tables": null,
+    "expected_doc_titles": ["review_analysis_guide.md"],
+    "expected_answer_contains": ["right-skewed", "5"],
+    "expected_chart_type": "none"
+  },
+
+  {
+    "id": "hybrid-01",
+    "difficulty": "medium",
+    "question": "Why are northern Brazilian states slower to receive their orders?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["orders", "customers"],
+    "expected_doc_titles": ["delivery_performance.md"],
+    "expected_answer_contains": ["distance", "RR", "AP"],
+    "expected_chart_type": "table"
+  },
+  {
+    "id": "hybrid-02",
+    "difficulty": "hard",
+    "question": "Which customer segments are most at risk of churning, and what should we do about them?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["customers", "orders"],
+    "expected_doc_titles": ["segment_definitions.md"],
+    "expected_answer_contains": ["At-Risk", "Lost", "reactivation"],
+    "expected_chart_type": null
+  },
+  {
+    "id": "hybrid-03",
+    "difficulty": "hard",
+    "question": "Are electronics reviews lower than the global average and if so, why?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["order_reviews", "order_items", "products", "product_category_translation"],
+    "expected_doc_titles": ["review_analysis_guide.md"],
+    "expected_answer_contains": ["electronics", "average"],
+    "expected_chart_type": null
+  },
+  {
+    "id": "hybrid-04",
+    "difficulty": "hard",
+    "question": "Compute the repeat purchase rate. Reference our defined formula in the answer.",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["customers", "orders"],
+    "expected_doc_titles": ["kpi_definitions.md"],
+    "expected_answer_contains": ["3", "customer_unique_id"],
+    "expected_chart_type": "kpi"
+  },
+  {
+    "id": "hybrid-05",
+    "difficulty": "hard",
+    "question": "Which sellers should we worry about based on the seller performance score, and how is that score defined?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["order_items", "orders", "order_reviews"],
+    "expected_doc_titles": ["kpi_definitions.md"],
+    "expected_answer_contains": ["score", "review", "delivery"],
+    "expected_chart_type": null
+  },
+  {
+    "id": "hybrid-06",
+    "difficulty": "medium",
+    "question": "What are the 5 categories with the lowest average review score (min 100 reviews) and what's our process for investigating low-score categories?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["order_reviews", "order_items", "products", "product_category_translation"],
+    "expected_doc_titles": ["review_analysis_guide.md"],
+    "expected_answer_contains": ["category", "review"],
+    "expected_chart_type": "bar"
+  },
+  {
+    "id": "hybrid-07",
+    "difficulty": "medium",
+    "question": "How does delivery time vary by state, and what's the typical national median for context?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["orders", "customers"],
+    "expected_doc_titles": ["delivery_performance.md"],
+    "expected_answer_contains": ["state", "median", "10"],
+    "expected_chart_type": "table"
+  },
+  {
+    "id": "hybrid-08",
+    "difficulty": "easy",
+    "question": "How big is our customer base and how does that relate to our segment definitions?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["customers"],
+    "expected_doc_titles": ["segment_definitions.md"],
+    "expected_answer_contains": ["96", "segment"],
+    "expected_chart_type": null
+  },
+  {
+    "id": "hybrid-09",
+    "difficulty": "medium",
+    "question": "Show me the breakdown of payment types and explain why boleto matters for delivery.",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["order_payments"],
+    "expected_doc_titles": ["delivery_performance.md"],
+    "expected_answer_contains": ["boleto", "credit_card"],
+    "expected_chart_type": "bar"
+  },
+  {
+    "id": "hybrid-10",
+    "difficulty": "easy",
+    "question": "What's our AOV in 2018 and how is AOV defined in our metrics?",
+    "expected_route": "hybrid",
+    "expected_sql_tables": ["order_items", "orders"],
+    "expected_doc_titles": ["kpi_definitions.md"],
+    "expected_answer_contains": ["AOV", "average", "freight"],
+    "expected_chart_type": "kpi"
+  }
+]

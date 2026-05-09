@@ -1,0 +1,1453 @@
+[
+  {
+    "id": "sql-01",
+    "difficulty": "easy",
+    "question": "What is the total number of orders in the dataset?",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "99,441",
+      "99441"
+    ],
+    "keyword_matches": [
+      true,
+      false
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "kpi",
+    "chart_correct": true,
+    "confidence": 0.95,
+    "answer": "The total number of orders in the dataset is 99,441.[sql]",
+    "timings": {
+      "router": 1350,
+      "sql": 3280,
+      "synthesis": 2808
+    },
+    "total_ms": 7443,
+    "prompt_tokens": 6206,
+    "cached_tokens": 0,
+    "completion_tokens": 129,
+    "cost_usd": 0.0010083,
+    "error": null
+  },
+  {
+    "id": "sql-02",
+    "difficulty": "easy",
+    "question": "What was the total revenue across all orders placed in 2017?",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders",
+      "order_items"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "7,142,672",
+      "7142672",
+      "7.14"
+    ],
+    "keyword_matches": [
+      true,
+      false,
+      false
+    ],
+    "keyword_coverage": 0.3333333333333333,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "kpi",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The total revenue across all orders placed in 2017 was $7,142,672.43.[sql]",
+    "timings": {
+      "router": 1393,
+      "sql": 7895,
+      "synthesis": 1959
+    },
+    "total_ms": 11252,
+    "prompt_tokens": 6390,
+    "cached_tokens": 4992,
+    "completion_tokens": 212,
+    "cost_usd": 0.0007113,
+    "error": null
+  },
+  {
+    "id": "sql-03",
+    "difficulty": "easy",
+    "question": "List the top 5 customer states by number of orders.",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders",
+      "customers"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "SP",
+      "RJ",
+      "MG"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "bar",
+    "actual_chart_type": "bar",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The top 5 customer states by number of orders are as follows: S\u00e3o Paulo (SP) with 41,746 orders, Rio de Janeiro (RJ) with 12,852 orders, Minas Gerais (MG) with 11,635 orders, Rio Grande do Sul (RS) with 5,466 orders, and Paran\u00e1 (PR) with 5,045 orders.[sql]",
+    "timings": {
+      "router": 963,
+      "sql": 3712,
+      "synthesis": 2518
+    },
+    "total_ms": 7210,
+    "prompt_tokens": 6291,
+    "cached_tokens": 4992,
+    "completion_tokens": 247,
+    "cost_usd": 0.00071745,
+    "error": null
+  },
+  {
+    "id": "sql-04",
+    "difficulty": "easy",
+    "question": "What is the average review score across all reviews?",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "order_reviews"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "4.0",
+      "4.1"
+    ],
+    "keyword_matches": [
+      true,
+      false
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "kpi",
+    "chart_correct": true,
+    "confidence": 0.95,
+    "answer": "The average review score across all reviews is approximately 4.09 [sql].",
+    "timings": {
+      "router": 1103,
+      "sql": 1823,
+      "synthesis": 1545
+    },
+    "total_ms": 4473,
+    "prompt_tokens": 6226,
+    "cached_tokens": 5376,
+    "completion_tokens": 148,
+    "cost_usd": 0.0006195,
+    "error": null
+  },
+  {
+    "id": "sql-05",
+    "difficulty": "medium",
+    "question": "What share of delivered orders arrive on or before the estimated delivery date?",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "92",
+      "93"
+    ],
+    "keyword_matches": [
+      false,
+      false
+    ],
+    "keyword_coverage": 0.0,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "kpi",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "Approximately 91.88% of delivered orders arrive on or before the estimated delivery date, based on the analysis of the orders data.[sql]",
+    "timings": {
+      "router": 1053,
+      "sql": 3309,
+      "synthesis": 1731
+    },
+    "total_ms": 6095,
+    "prompt_tokens": 6321,
+    "cached_tokens": 5376,
+    "completion_tokens": 248,
+    "cost_usd": 0.0006937499999999999,
+    "error": null
+  },
+  {
+    "id": "sql-06",
+    "difficulty": "medium",
+    "question": "Top 10 product categories by total revenue in 2018, in English category names.",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders",
+      "order_items",
+      "products",
+      "product_category_translation"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "health_beauty",
+      "watches_gifts",
+      "bed_bath_table"
+    ],
+    "keyword_matches": [
+      false,
+      false,
+      false
+    ],
+    "keyword_coverage": 0.0,
+    "expected_chart_type": "bar",
+    "actual_chart_type": "bar",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The top 10 product categories by total revenue in 2018 are as follows: 1) Health & Beauty - $866,810.34, 2) Watches & Gifts - $749,738.44, 3) Bed, Bath & Table - $643,653.48, 4) Sports & Leisure - $604,393.87, 5) Computers & Accessories - $583,989.37, 6) Housewares - $481,661.00, 7) Furniture & Decor - $470,024.38, 8) Auto - $399,005.20, 9) Baby - $291,738.08, and 10) Cool Stuff - $260,159.81.[sql]",
+    "timings": {
+      "router": 1228,
+      "sql": 5890,
+      "synthesis": 5300
+    },
+    "total_ms": 12422,
+    "prompt_tokens": 6492,
+    "cached_tokens": 4992,
+    "completion_tokens": 444,
+    "cost_usd": 0.0008657999999999999,
+    "error": null
+  },
+  {
+    "id": "sql-07",
+    "difficulty": "medium",
+    "question": "Average delivery time in days for delivered orders, by customer state.",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders",
+      "customers"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "RR",
+      "AP",
+      "AM"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "table",
+    "actual_chart_type": "table",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The average delivery time in days for delivered orders, by customer state, varies significantly. For example, the state with the longest average delivery time is RR at approximately 29.39 days, followed by AP at 27.19 days and AM at 26.43 days. In contrast, the state with the shortest average delivery time is MG at about 12.01 days. Other notable states include RJ with an average of 15.31 days and SC at 14.95 days. The data includes a total of 27 states with varying numbers of orders, indicating a diverse range of delivery experiences across regions.[sql]",
+    "timings": {
+      "router": 1431,
+      "sql": 5737,
+      "synthesis": 3954
+    },
+    "total_ms": 11124,
+    "prompt_tokens": 6633,
+    "cached_tokens": 2816,
+    "completion_tokens": 373,
+    "cost_usd": 0.0010075499999999999,
+    "error": null
+  },
+  {
+    "id": "sql-08",
+    "difficulty": "easy",
+    "question": "How many distinct sellers appear in the dataset?",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "sellers"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "3,095",
+      "3095"
+    ],
+    "keyword_matches": [
+      true,
+      false
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "kpi",
+    "chart_correct": true,
+    "confidence": 0.95,
+    "answer": "There are 3,095 distinct sellers in the dataset according to the SQL query results.[sql]",
+    "timings": {
+      "router": 1087,
+      "sql": 1858,
+      "synthesis": 1273
+    },
+    "total_ms": 4219,
+    "prompt_tokens": 6214,
+    "cached_tokens": 4992,
+    "completion_tokens": 143,
+    "cost_usd": 0.0006435,
+    "error": null
+  },
+  {
+    "id": "sql-09",
+    "difficulty": "hard",
+    "question": "What is the median number of items per order? (SQLite has no MEDIAN.)",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "order_items"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "1"
+    ],
+    "keyword_matches": [
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "kpi",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The median number of items per order is 1.0, as calculated from the order_items table by counting the items per order and determining the middle value(s) of those counts.[sql]",
+    "timings": {
+      "router": 1027,
+      "sql": 5960,
+      "synthesis": 2032
+    },
+    "total_ms": 9020,
+    "prompt_tokens": 6363,
+    "cached_tokens": 5376,
+    "completion_tokens": 293,
+    "cost_usd": 0.0007270499999999999,
+    "error": null
+  },
+  {
+    "id": "sql-10",
+    "difficulty": "medium",
+    "question": "Show monthly revenue across all of 2017.",
+    "expected_route": "sql",
+    "actual_route": "sql",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders",
+      "order_items"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": null,
+    "doc_titles_retrieved": [],
+    "doc_hit": null,
+    "expected_keywords": [
+      "2017"
+    ],
+    "keyword_matches": [
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "line",
+    "actual_chart_type": "line",
+    "chart_correct": true,
+    "confidence": 0.95,
+    "answer": "The monthly revenue across all of 2017 is as follows:\n- January: $137,188.49\n- February: $286,280.62\n- March: $432,048.59\n- April: $412,422.24\n- May: $586,190.95\n- June: $502,963.04\n- July: $584,971.62\n- August: $668,204.60\n- September: $720,398.91\n- October: $769,312.37\n- November: $1,179,143.77\n- December: $863,547.23\nThese figures represent the total revenue generated from order items, including freight value, aggregated by month of the order purchase timestamp.[sql]",
+    "timings": {
+      "router": 981,
+      "sql": 4408,
+      "synthesis": 4965
+    },
+    "total_ms": 10360,
+    "prompt_tokens": 6502,
+    "cached_tokens": 4992,
+    "completion_tokens": 404,
+    "cost_usd": 0.0008433,
+    "error": null
+  },
+  {
+    "id": "docs-01",
+    "difficulty": "easy",
+    "question": "How do we calculate Customer Lifetime Value?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "kpi_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "customer_unique_id",
+      "price"
+    ],
+    "keyword_matches": [
+      false,
+      true
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "Customer Lifetime Value (CLV) is calculated as the total spend per unique customer to date. This is derived from summing the prices and freight values of all orders associated with each customer. The SQL query provided in the documentation illustrates this calculation, grouping the results by unique customer IDs to obtain the total CLV for each customer. It is important to note that the dataset used for this calculation reflects observed historical value over a period of approximately 25 months, rather than a predicted lifetime value, and trends should be interpreted with caution `[doc:kpi_definitions.md]`.",
+    "timings": {
+      "router": 1095,
+      "docs": 1259,
+      "synthesis": 2994
+    },
+    "total_ms": 5349,
+    "prompt_tokens": 4046,
+    "cached_tokens": 2816,
+    "completion_tokens": 189,
+    "cost_usd": 0.0005091,
+    "error": null
+  },
+  {
+    "id": "docs-02",
+    "difficulty": "medium",
+    "question": "How is the seller performance score calculated?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "kpi_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "review_analysis_guide.md",
+      "kpi_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "review",
+      "delivery",
+      "cancellation"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The seller performance score is a composite metric used for seller leaderboards, calculated from three equally weighted components, each rescaled to a 0-1 scale: 1) the average review score on items sold by the seller, normalized using the formula `(score - 1) / 4`; 2) the on-time delivery rate, which is the proportion of items delivered on or before the estimated delivery date; and 3) the order completion rate, defined as `1 - cancellation rate`[doc:kpi_definitions.md]. The final score is computed by averaging these three components for sellers with at least 10 orders to ensure the score's reliability[doc:kpi_definitions.md].",
+    "timings": {
+      "router": 968,
+      "docs": 594,
+      "synthesis": 4090
+    },
+    "total_ms": 5653,
+    "prompt_tokens": 4140,
+    "cached_tokens": 2816,
+    "completion_tokens": 216,
+    "cost_usd": 0.0005394,
+    "error": null
+  },
+  {
+    "id": "docs-03",
+    "difficulty": "medium",
+    "question": "How is RFM scoring computed for the Olist dataset?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "rfm_methodology.md"
+    ],
+    "doc_titles_retrieved": [
+      "rfm_methodology.md",
+      "rfm_methodology.md",
+      "segment_definitions.md",
+      "rfm_methodology.md",
+      "segment_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "recency",
+      "frequency",
+      "monetary"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "RFM scoring for the Olist dataset is computed using three dimensions: Recency (R), Frequency (F), and Monetary value (M). The scoring is performed at the `customer_unique_id` level to ensure accurate classification of repeat customers. Each dimension is scored on a scale from 1 to 5 using the NTILE function in SQL, where lower recency days yield higher scores, and higher frequency and monetary values also yield higher scores. However, due to the low repeat purchase rate of approximately 3%, the Frequency dimension is often treated as binary, with a score of 1 for customers who have purchased only once and a score of 5 for those who have purchased multiple times. This adjustment leads to a simplified segmentation approach that focuses on Recency and Frequency, using Monetary value as a tiebreaker rather than a primary axis in segment definitions [doc:rfm_methodology.md] [doc:segment_definitions.md].",
+    "timings": {
+      "router": 837,
+      "docs": 670,
+      "synthesis": 4446
+    },
+    "total_ms": 5955,
+    "prompt_tokens": 4051,
+    "cached_tokens": 2816,
+    "completion_tokens": 272,
+    "cost_usd": 0.00055965,
+    "error": null
+  },
+  {
+    "id": "docs-04",
+    "difficulty": "easy",
+    "question": "What is the difference between a Champion and a Loyal customer in our segmentation?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "segment_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "Champions",
+      "Loyal",
+      "recency"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The primary difference between Champions and Loyal customers lies in their recency of purchases. Champions are defined as customers who have made at least two purchases (Frequency >= 2) and have a recency of 90 days or less (R <= 90), representing about 0.3% of the customer base. In contrast, Loyal customers also have made at least two purchases but have a recency between 91 and 180 days (91 <= R <= 180), making up approximately 0.7% of the population. Thus, while both segments are characterized by a similar frequency of purchases, Champions are more recent buyers compared to Loyal customers, who have not purchased in the last three months but within the last six months.[doc:segment_definitions.md]",
+    "timings": {
+      "router": 956,
+      "docs": 360,
+      "synthesis": 3999
+    },
+    "total_ms": 5316,
+    "prompt_tokens": 4052,
+    "cached_tokens": 2816,
+    "completion_tokens": 238,
+    "cost_usd": 0.0005394,
+    "error": null
+  },
+  {
+    "id": "docs-05",
+    "difficulty": "easy",
+    "question": "What is the on-time delivery SLA?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "delivery_performance.md",
+      "kpi_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "delivery_performance.md",
+      "delivery_performance.md",
+      "delivery_performance.md",
+      "delivery_performance.md",
+      "kpi_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "estimated",
+      "delivered"
+    ],
+    "keyword_matches": [
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The on-time delivery Service Level Agreement (SLA) is defined as being **delivered on or before the estimated date**. The national on-time delivery rate is approximately **93%**. This rate is calculated based on the percentage of orders that are delivered by the promised date, with the estimate typically set generously to encourage timely delivery. Missing this SLA is considered an alert condition, indicating potential issues in the delivery process.[doc:delivery_performance.md]",
+    "timings": {
+      "router": 896,
+      "docs": 293,
+      "synthesis": 3548
+    },
+    "total_ms": 4738,
+    "prompt_tokens": 4021,
+    "cached_tokens": 2816,
+    "completion_tokens": 166,
+    "cost_usd": 0.00049155,
+    "error": null
+  },
+  {
+    "id": "docs-06",
+    "difficulty": "easy",
+    "question": "What columns are available in the orders table and what do they mean?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "data_dictionary.md"
+    ],
+    "doc_titles_retrieved": [
+      "delivery_performance.md",
+      "data_dictionary.md",
+      "data_dictionary.md",
+      "kpi_definitions.md",
+      "segment_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "order_status",
+      "order_purchase_timestamp"
+    ],
+    "keyword_matches": [
+      false,
+      true
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The `orders` table contains several key columns, each with specific meanings:  \n- `order_purchase_timestamp`: The timestamp when the customer placed the order, serving as the starting point for tracking.  \n- `order_approved_at`: Indicates when the payment was cleared; this field is NULL for canceled orders.  \n- `order_delivered_carrier_date`: The date when the seller handed the order off to the carrier, which is NULL until the order is shipped.  \n- `order_delivered_customer_date`: The actual delivery date to the customer, also NULL until the order is delivered.  \n- `order_estimated_delivery_date`: The date promised to the customer at the time of order placement, providing an expected delivery timeframe.[1][2]",
+    "timings": {
+      "router": 922,
+      "docs": 466,
+      "synthesis": 4114
+    },
+    "total_ms": 5504,
+    "prompt_tokens": 4176,
+    "cached_tokens": 2816,
+    "completion_tokens": 240,
+    "cost_usd": 0.0005592,
+    "error": null
+  },
+  {
+    "id": "docs-07",
+    "difficulty": "medium",
+    "question": "What does it mean if a category has an average review score below 4.0?",
+    "expected_route": "docs",
+    "actual_route": "hybrid",
+    "routing_correct": false,
+    "expected_sql_tables": null,
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "review_analysis_guide.md"
+    ],
+    "doc_titles_retrieved": [
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "kpi_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "below",
+      "4.0",
+      "negative"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "table",
+    "chart_correct": false,
+    "confidence": 0.85,
+    "answer": "An average review score below 4.0 indicates potential customer dissatisfaction, as it is considered a meaningful negative signal in the context of review analysis. The global mean review score is around 4.1, and scores below this threshold suggest that a category may be experiencing quality issues or customer complaints. Specifically, categories with lower scores may have a higher proportion of detractor reviews (1-2 star ratings), which can further highlight dissatisfaction among customers. For instance, categories like \"security_and_services\" and \"diapers_and_hygiene\" have average scores of 2.5 and 3.38, respectively, indicating significant concerns from customers in these areas, as reflected in the review excerpts that mention poor quality and unmet expectations [doc:review_analysis_guide.md]. Overall, a score below 4.0 warrants further investigation into customer feedback and product quality to address underlying issues [doc:review_analysis_guide.md].",
+    "timings": {
+      "router": 1387,
+      "sql": 6631,
+      "docs": 414,
+      "reviews": 623,
+      "synthesis": 5184
+    },
+    "total_ms": 14243,
+    "prompt_tokens": 7595,
+    "cached_tokens": 4992,
+    "completion_tokens": 493,
+    "cost_usd": 0.00106065,
+    "error": null
+  },
+  {
+    "id": "docs-08",
+    "difficulty": "medium",
+    "question": "How is the repeat purchase rate defined in our metrics?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "kpi_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "segment_definitions.md",
+      "rfm_methodology.md",
+      "data_dictionary.md",
+      "segment_definitions.md",
+      "kpi_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "customer_unique_id",
+      "share"
+    ],
+    "keyword_matches": [
+      false,
+      false
+    ],
+    "keyword_coverage": 0.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The repeat purchase rate is defined as the proportion of unique customers who have made two or more purchases. It is calculated by dividing the number of customers with at least two orders by the total number of unique customers. This metric is typically low, around 3% of unique customers, indicating a strong left tail when analyzed by customer segments. The repeat purchase rate is crucial for understanding customer retention and the effectiveness of marketing strategies aimed at converting one-time buyers into repeat customers.[doc:kpi_definitions.md][doc:segment_definitions.md]",
+    "timings": {
+      "router": 877,
+      "docs": 359,
+      "synthesis": 3094
+    },
+    "total_ms": 4331,
+    "prompt_tokens": 3983,
+    "cached_tokens": 2816,
+    "completion_tokens": 180,
+    "cost_usd": 0.00049425,
+    "error": null
+  },
+  {
+    "id": "docs-09",
+    "difficulty": "hard",
+    "question": "Why don't we use the standard 11-segment RFM grid for Olist customers?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "segment_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "rfm_methodology.md",
+      "rfm_methodology.md",
+      "rfm_methodology.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "frequency",
+      "repeat"
+    ],
+    "keyword_matches": [
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The standard 11-segment RFM grid is not used for Olist customers primarily because the frequency dimension (F) is not meaningful in this context. Olist's repeat-purchase rate is approximately 3%, leading to a situation where about 97% of customers have only one order, which effectively collapses the frequency scores into a binary outcome. As a result, the traditional RFM grid is reduced to seven segments that actually contain customers, with segments defined based on Recency and Frequency, while Monetary value serves only as a tiebreaker rather than a primary axis. This approach allows for more accurate segmentation given the dataset's characteristics, where frequency lacks discriminating power due to its degenerate nature in the Olist context [1][4][5].",
+    "timings": {
+      "router": 976,
+      "docs": 301,
+      "synthesis": 4675
+    },
+    "total_ms": 5952,
+    "prompt_tokens": 4048,
+    "cached_tokens": 2816,
+    "completion_tokens": 249,
+    "cost_usd": 0.0005453999999999999,
+    "error": null
+  },
+  {
+    "id": "docs-10",
+    "difficulty": "medium",
+    "question": "How should I interpret the review score distribution?",
+    "expected_route": "docs",
+    "actual_route": "docs",
+    "routing_correct": true,
+    "expected_sql_tables": null,
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "review_analysis_guide.md"
+    ],
+    "doc_titles_retrieved": [
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "review_analysis_guide.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "right-skewed",
+      "5"
+    ],
+    "keyword_matches": [
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "none",
+    "actual_chart_type": "none",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The review score distribution is heavily right-skewed, with approximately 57% of reviews scoring a 5, 19% scoring a 4, 8% scoring a 3, 3% scoring a 2, and 12% scoring a 1. This distribution indicates a bimodal shape, characterized by a peak at 5 stars and a smaller peak at 1 star, with relatively few reviews in the middle range. Such a pattern is typical in Brazilian e-commerce, where customers are more likely to leave reviews when they are either very satisfied or very dissatisfied. Therefore, it is important to consider both the mean score and the share of lower scores (1-2 stars) to get a complete picture of customer sentiment, as relying solely on the mean can obscure significant dissatisfaction among customers. This bimodal distribution suggests that monitoring the detractor rate (1-2 star reviews) is crucial for understanding overall customer experience and addressing potential issues effectively.[1][5]",
+    "timings": {
+      "router": 874,
+      "docs": 386,
+      "synthesis": 4797
+    },
+    "total_ms": 6058,
+    "prompt_tokens": 4088,
+    "cached_tokens": 2816,
+    "completion_tokens": 280,
+    "cost_usd": 0.00057,
+    "error": null
+  },
+  {
+    "id": "hybrid-01",
+    "difficulty": "medium",
+    "question": "Why are northern Brazilian states slower to receive their orders?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders",
+      "customers"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "delivery_performance.md"
+    ],
+    "doc_titles_retrieved": [
+      "delivery_performance.md",
+      "delivery_performance.md",
+      "delivery_performance.md",
+      "kpi_definitions.md",
+      "review_analysis_guide.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "distance",
+      "RR",
+      "AP"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "table",
+    "actual_chart_type": "table",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "Northern Brazilian states experience slower delivery times due to geographic factors and the concentration of sellers in the Southeast region. The average delivery times for several northern states are significantly higher than those in the Southeast, with Roraima (RR) averaging approximately 29.39 days, Amap\u00e1 (AP) at 27.19 days, and Amazonas (AM) at 26.43 days for delivered orders, indicating a trend of longer delivery times in these areas compared to states like S\u00e3o Paulo (SP) and Rio de Janeiro (RJ) which are more centrally located to the majority of sellers [sql]. The geographic distance from major seller hubs in the Southeast is a strong predictor of delivery time, as noted in the delivery performance documentation [doc:delivery_performance.md]. Customer reviews also reflect dissatisfaction with delivery delays, with multiple reviews explicitly mentioning \"demora na entrega\" (delay in delivery) [review:563374a9], [review:5510c1ad], [review:deafd519]. Overall, the combination of geographic distance and seller concentration contributes to the slower order fulfillment in northern states.",
+    "timings": {
+      "router": 1652,
+      "sql": 5239,
+      "docs": 461,
+      "reviews": 691,
+      "synthesis": 6212
+    },
+    "total_ms": 14260,
+    "prompt_tokens": 7365,
+    "cached_tokens": 4992,
+    "completion_tokens": 542,
+    "cost_usd": 0.0010555500000000002,
+    "error": null
+  },
+  {
+    "id": "hybrid-02",
+    "difficulty": "hard",
+    "question": "Which customer segments are most at risk of churning, and what should we do about them?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "customers",
+      "orders"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "segment_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "At-Risk",
+      "Lost",
+      "reactivation"
+    ],
+    "keyword_matches": [
+      true,
+      false,
+      true
+    ],
+    "keyword_coverage": 0.6666666666666666,
+    "expected_chart_type": null,
+    "actual_chart_type": "line",
+    "chart_correct": null,
+    "confidence": 0.85,
+    "answer": "The customer segments most at risk of churning include the **One-Time Active** and **One-Time Dormant** segments. The One-Time Active segment, which comprises approximately 58.6% of the customer base, consists of customers who have made only one purchase within the last 365 days. The One-Time Dormant segment, making up about 28.7%, includes customers who have not made a purchase in over a year. To address these at-risk segments, targeted retention strategies should be implemented. For One-Time Active customers, a second-purchase nudge should be sent after 30 days to encourage repeat purchases. For One-Time Dormant customers, organic outreach and inexpensive email campaigns should be prioritized, as paid channels are not cost-effective for reactivation efforts. Additionally, the **At-Risk Repeat** segment, which includes customers who have made two or more purchases but have not ordered in the last 181 to 365 days, should receive reactivation campaigns with discounts tailored to their last order category to improve win-back rates, which decline significantly after 365 days of inactivity [doc:segment_definitions.md].",
+    "timings": {
+      "router": 1234,
+      "sql": 5672,
+      "docs": 621,
+      "synthesis": 5344
+    },
+    "total_ms": 12875,
+    "prompt_tokens": 8139,
+    "cached_tokens": 4992,
+    "completion_tokens": 505,
+    "cost_usd": 0.0011494499999999998,
+    "error": null
+  },
+  {
+    "id": "hybrid-03",
+    "difficulty": "hard",
+    "question": "Are electronics reviews lower than the global average and if so, why?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "order_reviews",
+      "order_items",
+      "products",
+      "product_category_translation"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "review_analysis_guide.md"
+    ],
+    "doc_titles_retrieved": [
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "electronics",
+      "average"
+    ],
+    "keyword_matches": [
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": null,
+    "actual_chart_type": "table",
+    "chart_correct": null,
+    "confidence": 0.5,
+    "answer": "The SQL query indicates that the average review score for electronics is not available, as the result shows `None` for both the global average and the electronics average. Therefore, it cannot be determined if electronics reviews are lower than the global average based on this data. However, customer reviews in the electronics category often highlight issues such as defective products, with multiple reviews explicitly stating problems like broken or malfunctioning items, which could contribute to lower scores if they were available for analysis. For instance, one review states, \"produto defeituoso\" (defective product) and another mentions, \"Produto avariado, quebrado\" (damaged, broken product) [review:877ea935][review:3b9671a3]. This pattern of complaints suggests that product quality issues may be a significant factor affecting customer satisfaction in this category.",
+    "timings": {
+      "router": 1180,
+      "sql": 8960,
+      "docs": 372,
+      "reviews": 1592,
+      "synthesis": 5703
+    },
+    "total_ms": 17811,
+    "prompt_tokens": 7319,
+    "cached_tokens": 4992,
+    "completion_tokens": 438,
+    "cost_usd": 0.0009862500000000001,
+    "error": null
+  },
+  {
+    "id": "hybrid-04",
+    "difficulty": "hard",
+    "question": "Compute the repeat purchase rate. Reference our defined formula in the answer.",
+    "expected_route": "hybrid",
+    "actual_route": "docs",
+    "routing_correct": false,
+    "expected_sql_tables": [
+      "customers",
+      "orders"
+    ],
+    "sql_executed": null,
+    "sql_returned_rows": null,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "kpi_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "kpi_definitions.md",
+      "segment_definitions.md",
+      "data_dictionary.md",
+      "kpi_definitions.md",
+      "rfm_methodology.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "3",
+      "customer_unique_id"
+    ],
+    "keyword_matches": [
+      true,
+      false
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "none",
+    "chart_correct": false,
+    "confidence": 0.85,
+    "answer": "The repeat purchase rate is calculated using the formula: \\( \\text{Repeat Purchase Rate} = \\frac{\\text{Number of Customers with 2 or More Orders}}{\\text{Total Number of Unique Customers}} \\). This is implemented in SQL by counting the number of customers who have made two or more purchases and dividing that by the total number of unique customers in the dataset, as shown in the provided SQL snippet from the methodology documentation `[doc:kpi_definitions.md]`. The repeat purchase rate is noted to be low, approximately 3% of unique customers, indicating a strong left tail in the distribution of repeat purchases `[doc:data_dictionary.md]`.",
+    "timings": {
+      "router": 1216,
+      "docs": 653,
+      "synthesis": 3807
+    },
+    "total_ms": 5677,
+    "prompt_tokens": 4122,
+    "cached_tokens": 2816,
+    "completion_tokens": 217,
+    "cost_usd": 0.0005373,
+    "error": null
+  },
+  {
+    "id": "hybrid-05",
+    "difficulty": "hard",
+    "question": "Which sellers should we worry about based on the seller performance score, and how is that score defined?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "order_items",
+      "orders",
+      "order_reviews"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "kpi_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "review_analysis_guide.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "score",
+      "review",
+      "delivery"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": null,
+    "actual_chart_type": "table",
+    "chart_correct": null,
+    "confidence": 0.85,
+    "answer": "Sellers to be concerned about are those with a performance score below 0.4, as indicated by the SQL results. The lowest performance score in the top 20 sellers is 0.324759, associated with seller ID `88460e8e`. The seller performance score is defined as a composite metric that includes three equally weighted components: the average review score (normalized to a scale of 0-1), the on-time delivery rate, and the order completion rate (calculated as 1 minus the cancellation rate)  [doc:kpi_definitions.md].",
+    "timings": {
+      "router": 1234,
+      "sql": 10361,
+      "docs": 500,
+      "synthesis": 3307
+    },
+    "total_ms": 15406,
+    "prompt_tokens": 8032,
+    "cached_tokens": 4992,
+    "completion_tokens": 497,
+    "cost_usd": 0.0011286,
+    "error": null
+  },
+  {
+    "id": "hybrid-06",
+    "difficulty": "medium",
+    "question": "What are the 5 categories with the lowest average review score (min 100 reviews) and what's our process for investigating low-score categories?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "order_reviews",
+      "order_items",
+      "products",
+      "product_category_translation"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "review_analysis_guide.md"
+    ],
+    "doc_titles_retrieved": [
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md",
+      "review_analysis_guide.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "category",
+      "review"
+    ],
+    "keyword_matches": [
+      false,
+      true
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "bar",
+    "actual_chart_type": "bar",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The five product categories with the lowest average review scores, each having at least 100 reviews, are as follows: office_furniture with an average score of 3.52 (1664 reviews), fashion_male_clothing at 3.76 (124 reviews), fixed_telephony at 3.76 (253 reviews), audio at 3.83 (359 reviews), and home_confort at 3.85 (430 reviews) `[sql]`. \n\nTo investigate low-score categories, the process involves a two-step pattern. First, quantify the issue using SQL to confirm the low scores and identify the specific categories. Then, sample actual customer comments from the lowest scoring subgroup (specifically those with scores of 3 or below) to identify recurring themes and issues. This approach allows for a detailed understanding of customer dissatisfaction and helps in addressing the root causes effectively `[doc:review_analysis_guide.md]`.",
+    "timings": {
+      "router": 1463,
+      "sql": 7006,
+      "docs": 435,
+      "synthesis": 4247
+    },
+    "total_ms": 13154,
+    "prompt_tokens": 7081,
+    "cached_tokens": 4992,
+    "completion_tokens": 495,
+    "cost_usd": 0.00098475,
+    "error": null
+  },
+  {
+    "id": "hybrid-07",
+    "difficulty": "medium",
+    "question": "How does delivery time vary by state, and what's the typical national median for context?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "orders",
+      "customers"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "delivery_performance.md"
+    ],
+    "doc_titles_retrieved": [
+      "kpi_definitions.md",
+      "delivery_performance.md",
+      "delivery_performance.md",
+      "delivery_performance.md",
+      "delivery_performance.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "state",
+      "median",
+      "10"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      false
+    ],
+    "keyword_coverage": 0.6666666666666666,
+    "expected_chart_type": "table",
+    "actual_chart_type": "table",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "Delivery times vary significantly by state, with the national median delivery time being approximately 12 days. For example, states like DF and MG have average delivery times of about 12.97 and 12.01 days, respectively, while states like RR have a much longer average of 29.39 days. The average delivery times for several other states include AC at 21.04 days, AL at 24.54 days, and PA at 23.77 days, indicating a range of performance across the country. Qualitatively, customer reviews reflect a mix of satisfaction and frustration regarding delivery times, with some customers noting timely deliveries while others express dissatisfaction with delays, particularly in certain regions where geographic factors may contribute to longer delivery times [review:e533ab0d] [review:0cf8068e]. Overall, geographic variance plays a significant role in delivery performance, as sellers are concentrated in specific areas, affecting delivery times to more distant customers [doc:delivery_performance.md].",
+    "timings": {
+      "router": 1106,
+      "sql": 13083,
+      "docs": 431,
+      "reviews": 366,
+      "synthesis": 6447
+    },
+    "total_ms": 21439,
+    "prompt_tokens": 7688,
+    "cached_tokens": 4992,
+    "completion_tokens": 573,
+    "cost_usd": 0.0011226,
+    "error": null
+  },
+  {
+    "id": "hybrid-08",
+    "difficulty": "easy",
+    "question": "How big is our customer base and how does that relate to our segment definitions?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "customers"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "segment_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md",
+      "segment_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "96",
+      "segment"
+    ],
+    "keyword_matches": [
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": null,
+    "actual_chart_type": "kpi",
+    "chart_correct": null,
+    "confidence": 0.85,
+    "answer": "The current customer base consists of 96,096 unique customers, as determined from the SQL query results `[sql]`. Our customer segments are defined based on Recency, Frequency, and Monetary (RFM) metrics, which categorize customers into groups such as 'Champions', 'Loyal', 'At-Risk Repeat', and others, depending on their purchasing behavior and recency of orders `[doc:segment_definitions.md]`. The segmentation is designed to reflect actual customer behavior rather than traditional models, as our repeat-purchase rate is approximately 3%, leading to a more simplified seven-segment structure that accurately represents our customer distribution `[doc:segment_definitions.md]`.",
+    "timings": {
+      "router": 1101,
+      "sql": 3156,
+      "docs": 404,
+      "synthesis": 4271
+    },
+    "total_ms": 8936,
+    "prompt_tokens": 6964,
+    "cached_tokens": 5376,
+    "completion_tokens": 290,
+    "cost_usd": 0.0008154,
+    "error": null
+  },
+  {
+    "id": "hybrid-09",
+    "difficulty": "medium",
+    "question": "Show me the breakdown of payment types and explain why boleto matters for delivery.",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "order_payments"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "delivery_performance.md"
+    ],
+    "doc_titles_retrieved": [],
+    "doc_hit": false,
+    "expected_keywords": [
+      "boleto",
+      "credit_card"
+    ],
+    "keyword_matches": [
+      true,
+      false
+    ],
+    "keyword_coverage": 0.5,
+    "expected_chart_type": "bar",
+    "actual_chart_type": "bar",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The breakdown of payment types for delivered orders is as follows: credit card accounts for 74,304 orders with a total revenue of $12,101,094.88, followed by boleto with 19,191 orders generating $2,769,932.58. Other payment types include vouchers with 3,679 orders totaling $343,013.19, and debit cards with 1,485 orders amounting to $208,421.12. Boleto is significant for delivery as it represents a substantial portion of the revenue and order volume, indicating its popularity among customers. However, customer reviews suggest that there are issues with delivery times associated with boleto payments, as multiple reviews mention delays in delivery, which could impact customer satisfaction and repeat business. This highlights the need for efficient processing of boleto transactions to improve delivery performance and customer experience overall.[sql][review:6a8068cb][review:38b6f495][review:563374a9][review:5510c1ad]",
+    "timings": {
+      "router": 1156,
+      "sql": 5182,
+      "reviews": 419,
+      "synthesis": 6141
+    },
+    "total_ms": 12902,
+    "prompt_tokens": 6545,
+    "cached_tokens": 4992,
+    "completion_tokens": 426,
+    "cost_usd": 0.0008629499999999999,
+    "error": null
+  },
+  {
+    "id": "hybrid-10",
+    "difficulty": "easy",
+    "question": "What's our AOV in 2018 and how is AOV defined in our metrics?",
+    "expected_route": "hybrid",
+    "actual_route": "hybrid",
+    "routing_correct": true,
+    "expected_sql_tables": [
+      "order_items",
+      "orders"
+    ],
+    "sql_executed": true,
+    "sql_returned_rows": true,
+    "sql_error": null,
+    "expected_doc_titles": [
+      "kpi_definitions.md"
+    ],
+    "doc_titles_retrieved": [
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md",
+      "kpi_definitions.md"
+    ],
+    "doc_hit": true,
+    "expected_keywords": [
+      "AOV",
+      "average",
+      "freight"
+    ],
+    "keyword_matches": [
+      true,
+      true,
+      true
+    ],
+    "keyword_coverage": 1.0,
+    "expected_chart_type": "kpi",
+    "actual_chart_type": "kpi",
+    "chart_correct": true,
+    "confidence": 0.85,
+    "answer": "The Average Order Value (AOV) for 2018 is approximately $140.10, calculated by averaging the sum of price and freight value for delivered orders during that year `[sql]`. AOV is defined as the mean revenue per order, specifically from the item side, and excludes any voucher-only transactions in the order payments `[doc:kpi_definitions.md]`.",
+    "timings": {
+      "router": 1218,
+      "sql": 5592,
+      "docs": 428,
+      "synthesis": 3032
+    },
+    "total_ms": 10273,
+    "prompt_tokens": 7087,
+    "cached_tokens": 4992,
+    "completion_tokens": 305,
+    "cost_usd": 0.0008716500000000001,
+    "error": null
+  }
+]

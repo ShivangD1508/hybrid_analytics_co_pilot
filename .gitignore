@@ -1,0 +1,43 @@
+# --- Secrets ---
+.env
+.env.local
+*.pem
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Virtualenvs ---
+venv/
+.venv/
+env/
+
+# --- Data artifacts (regenerable; don't commit) ---
+data/olist.db
+data/olist.db-journal
+data/olist.db-wal
+data/olist.db-shm
+data/chroma/
+data/raw/
+
+# --- Source dataset (download from Kaggle; see README quickstart) ---
+dataset/
+
+# --- Eval outputs ---
+# report.md and raw.json are committed as the published baseline.
+# Anything else under eval/results/ is intermediate and gitignored.
+eval/results/*.csv
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Notebook checkpoints ---
+.ipynb_checkpoints/
