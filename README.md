@@ -6,7 +6,7 @@ by routing between three sources -- a SQL database, methodology playbooks,
 and 41K customer reviews -- and synthesizing one answer with cited sources
 and a transparent reasoning chain.
 
-![Streamlit UI screenshot](docs/screenshot.png)
+
 <!-- replace docs/screenshot.png with a captured screenshot of the running app -->
 
 ## Why this project
